@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Variables for 6th Graders!</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f7ff;
+        text-align: center;
+        padding: 40px;
+    }
+    h1 {
+        color: #3c5dff;
+    }
+    #box {
+        margin: 20px auto;
+        padding: 20px;
+        width: 280px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 10px #bbb;
+    }
+    button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #3c5dff;
+        color: white;
+        margin: 5px;
+        font-size: 16px;
+    }
+    #valueDisplay {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>🎒 Learning Variables!</h1>
+<p>A <b>variable</b> is like a box that can store a value. You can change what's inside anytime!</p>
+
+<div id="box">
+    <p>Our variable name: <b>score</b></p>
+    <p id="valueDisplay">Current value: 0</p>
+
+    <button onclick="increase()">Increase</button>
+    <button onclick="reset()">Reset</button>
+</div>
+
+<script>
+    // our variable (the "box")
+    let score = 0;
+
+    function increase() {
+        score = score + 1;      // change what's inside the variable
+        updateDisplay();
+    }
+
+    function reset() {
+        score = 0;              // put new value into the variable
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        document.getElementById("valueDisplay").textContent =
+            "Current value: " + score;
+    }
+</script>
+
+</body>
+</html>
